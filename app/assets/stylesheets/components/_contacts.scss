@@ -1,0 +1,71 @@
+/* styles.css */
+
+.custom-styling { /* Styles are scoped to the custom-styling container */
+  text-align: center;
+  background-color: #f5f5f5; /* Set the background color for the styled section */
+}
+
+
+.custom-h1 {
+  margin-top: 20px; /* Add margin-top to the h1 */
+  color: black; /* Set text color to black */
+}
+
+
+.custom-styling .card {
+  background-color: white; /* Set the background color for the container */
+  padding: 20px;
+  text-align: center;
+}
+
+.custom-styling h3 {
+  color: rgb(6, 221, 6); /* Set text color to green */
+}
+
+.custom-styling .contact-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Add space between each link */
+}
+
+/* styles.css */
+
+.custom-styling { /* Styles are scoped to the custom-styling container */
+  text-align: center;
+  background-color: #f5f5f5; /* Set the background color for the styled section */
+  text-decoration: none;
+}
+
+.custom-h1 {
+  margin-top: 30px; /* Add margin-top to the h1 */
+  color: black; /* Set text color to black */
+}
+
+.card {
+  background-color: white; /* Set the background color for the container */
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-bottom: 10px; /* Add space between each link */
+}
+
+
+.contact-link i {
+  margin-right: 10px; /* Add space between the icon and text */
+  text-decoration: none;
+}
+
+.contact-link:hover .contact-text {
+  color: green;
+}
+
+.container {
+  max-width: 400px; /* Adjust the max-width value as needed */
+}
