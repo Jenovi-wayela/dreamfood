@@ -64,10 +64,9 @@
   color: white;
 }
 
-.active-page:hover {
-  color: white;
+.active-page,
+.active-page:hover,
+.active-page a:hover {
+  color: white !important;
 }
 
-.navbar-nav .nav-link:hover {
-  color: white;
-}
