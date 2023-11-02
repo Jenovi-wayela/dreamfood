@@ -1,0 +1,5 @@
+<% if current_user.admin? %>
+  <!-- Display features for adding and deleting content for admin users -->
+  <%= link_to 'Add Image', new_content_path %>
+  <!-- Display delete buttons for each content item -->
+<% end %>

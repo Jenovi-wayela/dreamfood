@@ -18,33 +18,20 @@
 
 }
 
-.navbar-lewagon {
-  justify-content: space-between;
-  background: black;
-  color:white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
 
 
-.navbar-nav .nav-item:not(.avatar) {
-  color: white;
-  margin-right: 100px;
-}
+// .navbar-nav .nav-item:not(.avatar) {
+//   color: white;
+//   margin-right: 100px;
+// }
 
 
-.navbar-brand {
-  max-width: 60px;
-  height: 40px;
-  // display: flex;
-  // align-items: center;
-}
+// .navbar-brand {
+//   max-width: 60px;
+//   height: 40px;
+//   // display: flex;
+//   // align-items: center;
+// }
 
 
 .navbar-nav .nav-item:not(.avatar) {
@@ -60,13 +47,20 @@
   // align-items: center;
 }
 
-.active-page {
-  color: white;
+/* Styles for the page name in the navbar */
+.navbar-lewagon .navbar-nav .nav-link {
+  color:rgb(8, 184, 8) ;
+  margin-right: 20px;
+  transition: color 0.3s; /* Add a smooth color transition on hover */
 }
 
-.active-page,
-.active-page:hover,
-.active-page a:hover {
-  color: white !important;
+/* Hover effect for the page name */
+.navbar-lewagon .navbar-nav .nav-link:hover {
+  color: white; /* Change this to your desired hover color */
 }
 
+/* Active page styles */
+.navbar-lewagon .navbar-nav .nav-item.active .nav-link {
+  color: rgb(8, 184, 8)e; /* Change to your desired color for active link */
+  background-color: white; /* Change to your desired background color for active link */
+}

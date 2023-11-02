@@ -1,0 +1,4 @@
+<%= simple_form_for @content, url: contents_path, html: { multipart: true } do |f| %>
+  <%= f.input :media, as: :file %>
+  <%= f.button :submit %>
+<% end %>

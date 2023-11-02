@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
   # skip_before_action :authenticate_user!, only: [ :home ]
 
+  def gallery
+    @contents = Content.all
+  end
+
   def about
     # Your code for the About page
   end
@@ -13,7 +17,4 @@ class PagesController < ApplicationController
     # Your code for the Home page
   end
 
-  def gallery
-    # Your code for the Gallery page
-  end
 end
