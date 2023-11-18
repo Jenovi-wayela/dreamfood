@@ -9,7 +9,38 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <link rel="stylesheet" type="text/css" href="contacts.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get references to the image container and image element
+    var imageContainer = document.getElementById('image-container');
+    var slideshowImage = document.getElementById('slideshow-image');
 
+    // Get the array of image paths from the data attribute
+    var images = JSON.parse(slideshowImage.getAttribute('data-images'));
+
+    // Initialize an index to keep track of the current image
+    var currentIndex = 0;
+
+    // Function to change the image source
+    function changeImage() {
+      slideshowImage.src = images[currentIndex];
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    // Set an interval to change the image every 5 seconds (5000 milliseconds)
+    var intervalId = setInterval(changeImage, 3000);
+
+    // Pause the slideshow on mouseover and resume on mouseout (optional)
+    imageContainer.addEventListener('mouseover', function() {
+      clearInterval(intervalId);
+    });
+
+    imageContainer.addEventListener('mouseout', function() {
+      intervalId = setInterval(changeImage, 3000);
+    });
+  });
+</script>
   </head>
 
   <body>

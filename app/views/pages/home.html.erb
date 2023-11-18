@@ -1,4 +1,26 @@
-<h1>DREAMFOOD</h1>
+<div class="images">
+<!--<div id="image-container">-->
+<img id="slideshow-image" data-images='["<%= asset_path "image1.jpg" %>", "<%= asset_path "image2.jpg" %>", "<%= asset_path "image3.jpg" %>", "<%= asset_path "image4.jpg" %>", "<%= asset_path "image5.jpg" %>", "<%= asset_path "image6.jpg" %>", "<%= asset_path "image7.jpg" %>"]' alt="Slideshow Image">
+<!--</div>-->
+</div>
+
+<div class="cuisine">
+  <h2>Our menu is as diverse as your event - experience the flavors of African and European cuisine</h2>
+  <div class="card-container">
+    <div class="card">
+      <img src="<%= asset_path 'african.jpg' %>" alt="Image 1">
+    </div>
+    <div class="card">
+      <img src="<%= asset_path 'european.jpg' %>" alt="Image 2">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<br>
 <footer class="footer">
     <div class="footer-links">
     <footer><%= render 'shared/footer' %> </footer>

@@ -1,0 +1,48 @@
+.images {
+  margin-top: 20px; /* Add margin to the top for separation */
+  margin-bottom: 20px; /* Add margin to the bottom for separation */
+}
+
+#slideshow-image {
+  width: 100%;
+  max-height: 50px; /* Set a fixed height */
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.footer {
+  margin-top: auto; /* Push the footer to the bottom */
+  border: 1px solid #ddd;
+  padding: 10px; /* Add padding to the footer */
+}
+
+
+.cuisine {
+  margin-top: 20px;
+  text-align: center; /* Center the text horizontally */
+}
+
+.cuisine h2 {
+  margin-bottom: 20px; /* Add some space between the heading and the images */
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 0 0 48%; /* Set a percentage width for the cards */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove default inline-block spacing */
+  border-radius: 8px; /* Add border radius to images */
+}
