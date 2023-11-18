@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about', as: 'about'
   get 'contact', to: 'pages#contact', as: 'contact'
   get 'gallery', to: 'pages#gallery', as: 'gallery'
+  get 'donations', to: 'pages#donations', as: 'donations'
+
 
   resources :contents, only: [:new, :create, :destroy]
 

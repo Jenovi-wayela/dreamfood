@@ -1,14 +1,24 @@
+<!-- app/views/pages/gallery.html.erb -->
 <h1>OUR WORK</h1>
 
 <div class="content-cards">
   <% @contents.each do |content| %>
     <div class="content-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= content.media_url %>)">
+      <!-- Display content details here -->
+    </div>
+  <% end %>
+
+  <% if current_user.admin? %>
+    <!-- Show admin options here, e.g., add/delete buttons -->
+    <div class="admin-options">
+      <%= link_to "Add Media", new_content_path %>
+      <!-- Add delete button or other admin options as needed -->
     </div>
   <% end %>
 </div>
 
 <footer class="footer">
-    <div class="footer-links">
+  <div class="footer-links">
     <footer><%= render 'shared/footer' %> </footer>
-    </div>
+  </div>
 </footer>
