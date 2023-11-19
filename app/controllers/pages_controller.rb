@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
   def gallery
     @contents = Content.all
-    @contents = @contents.where(user_id: current_user.id) if current_user.admin?
+    @contents = @contents.where(user_id: current_user.id) if current_user&.admin?
   end
 
 
