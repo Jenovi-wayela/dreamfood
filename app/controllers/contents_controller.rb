@@ -41,3 +41,7 @@ class ContentsController < ApplicationController
     redirect_to root_path, alert: 'You are not authorized to perform this action.' unless current_user.admin?
   end
 end
+
+
+
+

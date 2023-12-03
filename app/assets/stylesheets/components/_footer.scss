@@ -1,32 +1,32 @@
-// .footer {
-//   background: #F4F4F4;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   height: 100px;
-//   padding: 0px 50px;
-//   color: rgba(0,0,0,0.3);
-// }
-// .footer-links {
-//   display: flex;
-//   align-items: center;
-// }
-// .footer-links a {
-//   color: black;
-//   opacity: 0.15;
-//   text-decoration: none;
-//   font-size: 24px;
-//   padding: 0px 10px;
-// }
-// .footer-links a:hover {
-//   opacity: 1;
-// }
-// .footer .fa-heart {
-//   color: #D23333;
-// }
+/ .footer {
+  //   background: #F4F4F4;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   height: 100px;
+  //   padding: 0px 50px;
+  //   color: rgba(0,0,0,0.3);
+  // }
+  // .footer-links {
+  //   display: flex;
+  //   align-items: center;
+  // }
+  // .footer-links a {
+  //   color: black;
+  //   opacity: 0.15;
+  //   text-decoration: none;
+  //   font-size: 24px;
+  //   padding: 0px 10px;
+  // }
+  // .footer-links a:hover {
+  //   opacity: 1;
+  // }
+  // .footer .fa-heart {
+  //   color: #D23333;
+  // }
 
 
-/* Add these styles to your CSS file */
+  /* Add these styles to your CSS file */
 
 // html, body {
 //   height: 100%;
@@ -83,16 +83,25 @@ body {
   display: flex;
   align-items: center;
 
+  // html, body {
+  //   height: 100%;
+  //   margin: 0;
+  //   padding: 0;
+  // }
 
-  a {
-    color: #a5ffb3;
-    opacity: 0.6;
-    text-decoration: none;
-    font-size: 20px;
-    margin-right: 10px;
-
-    &:hover {
-      opacity: 1;
-    }
+  .footer {
+    background-color:transparent; /* Change the background color to your preference */
+    color:black; /* Change the text color to your preference */
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: 30px;
   }
-}
+
+  .footer a:hover {
+    color: gray; /* Change the color to gray on hover */
+  }
+
+  

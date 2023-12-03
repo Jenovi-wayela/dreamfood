@@ -9,6 +9,7 @@
   max-height: 500px; /* Set a fixed height */
   object-fit: cover;
 
+
   // border: 1px solid #ddd;
 
 }
@@ -36,6 +37,7 @@
   max-width: 300px;
   display: grid;
   grid-template-columns: 200px 200px;
+
   grid-row-gap: 20px;
   grid-column-gap: 20px;
 }
@@ -47,6 +49,7 @@
 //   border-radius: 8px;
 //   overflow: hidden;
 // }
+
 
 .card img {
   width: 100%;

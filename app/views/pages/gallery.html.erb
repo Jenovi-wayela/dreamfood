@@ -1,21 +1,54 @@
-<!-- app/views/pages/gallery.html.erb -->
 <h1>OUR WORK</h1>
 
 <div class="content-cards">
   <% @contents.each do |content| %>
-    <div class="content-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= content.media_url %>)">
-      <!-- Display content details here -->
-    </div>
-  <% end %>
-
-  <% if current_user.admin? %>
-    <!-- Show admin options here, e.g., add/delete buttons -->
-    <div class="admin-options">
-      <%= link_to "Add Media", new_content_path %>
-      <!-- Add delete button or other admin options as needed -->
-    </div>
+    <% content.media.each do |file| %>
+      <% if file.image? %>
+        <!-- Display image -->
+        <div class="content-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= file.service_url %>);">
+          <!-- Additional content details here -->
+        </div>
+      <% elsif file.video? %>
+        <!-- Display video -->
+        <div class="content-card">
+          <%= cl_video_tag file.service_url, controls: true %>
+          <!-- Additional content details here -->
+        </div>
+      <% end %>
+    <% end %>
   <% end %>
 </div>
+
+<% if current_user&.admin? %>
+  <!-- Show admin options here, e.g., add/delete buttons -->
+  <div class="admin-options">
+    <%= simple_form_for(@content, url: contents_path, html: { method: :post }) do |f| %>
+      <div class="row">
+        <div class="col-md-12">
+          <%= f.input :media, as: :file %>
+        </div>
+      </div>
+      <%= f.button :submit, class: 'btn btn-primary' %>
+    <% end %>
+
+    <%= link_to "Add Media", class: 'add-media-link', data: { toggle: 'modal', target: '#addMediaModal' } %>
+
+<%= simple_form_for(@content, url: contents_path, html: { method: :post, multipart: true }) do |f| %>
+  <div class="row">
+    <div class="col-md-12">
+      <%= f.input :media, as: :file %>
+    </div>
+  </div>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>
+
+
+    <!-- Display delete buttons for each media -->
+    <% @contents.each do |content| %>
+      <%= link_to "Delete", media_path(content), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
+<% end %>
 
 <footer class="footer">
   <div class="footer-links">
