@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to @content, notice: 'Review was successfully created.'
     else
-      render 'contents/show'
+      render 'contents/home'
     end
   end
 

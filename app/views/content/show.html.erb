@@ -1,1 +1,28 @@
+<!-- app/views/contents/show.html.erb -->
+<h1><%= @content.title %></h1>
+<p><%= @content.description %></p>
+
+<!-- Display existing reviews -->
+<h2>Reviews</h2>
+<% @content.reviews.each do |review| %>
+  <p>Rating: <%= review.rating %></p>
+  <p><%= review.comment %></p>
+<% end %>
+
+<!-- Form to submit a new review -->
+<%= form_with(model: [@content, Review.new], local: true) do |form| %>
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.number_field :rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Submit Review' %>
+  </div>
+<% end %>
 
