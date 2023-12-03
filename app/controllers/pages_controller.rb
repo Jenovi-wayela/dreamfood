@@ -8,7 +8,6 @@ class PagesController < ApplicationController
     @contents = @contents.where(user_id: current_user.id) if current_user&.admin?
   end
 
-
   def about
     # Your code for the About page
   end
@@ -19,6 +18,6 @@ class PagesController < ApplicationController
 
   def home
     # Your code for the Home page
+    @contents = Content.find(params[:id])
   end
-
 end

@@ -28,6 +28,61 @@
 
   /* Add these styles to your CSS file */
 
+// html, body {
+//   height: 100%;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .footer {
+//   background-color:transparent; /* Change the background color to your preference */
+//   color:black; /* Change the text color to your preference */
+//   padding: 20px;
+//   text-align: center;
+//   position: fixed;
+//   bottom: 0;
+//   width: 100%;
+//   padding-top: 30px;
+// }
+
+// .footer a:hover {
+//   color: gray; /* Change the color to gray on hover */
+// }
+
+
+// .footer a {
+//   font-size: 24px; /* Adjust the font size to make the icons bigger */
+//   text-decoration: none; /* Remove underline from links */
+//   color:black; /* Change the color of the icons to your preference */
+// }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  background: #020202;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 39px;
+  padding: 0 50px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  width: 100%;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 1px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+
   // html, body {
   //   height: 100%;
   //   margin: 0;
@@ -49,9 +104,4 @@
     color: gray; /* Change the color to gray on hover */
   }
 
-
-  .footer a {
-    font-size: 24px; /* Adjust the font size to make the icons bigger */
-    text-decoration: none; /* Remove underline from links */
-    color:black; /* Change the color of the icons to your preference */
-  }
+  
