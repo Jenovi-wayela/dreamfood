@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'donations', to: 'pages#donations', as: 'donations'
 
 
-  resources :contents, only: [:new, :create, :destroy]
+  resources :contents, :reviews, only: [:new, :create, :destroy]
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

@@ -1,5 +1,7 @@
 class Content < ApplicationRecord
   has_many_attached :media
+  has_many :reviews
+
   validates :media, presence: true
 
   before_create :upload_to_cloudinary
